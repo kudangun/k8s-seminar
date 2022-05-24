@@ -8,14 +8,15 @@ spec:
     image: supergiantkir/animals:bear
     volumeMounts:
     - name: app-storage
-      mountPath: /tmp/files1
+      mountPath: /storage
   - name: app2
     image: yanivomc/spring-music:latest
     volumeMounts:
     - name: app-storage
-      mountPath: /tmp/files2
+      mountPath: /storage
   volumes:
   - name: test-volume
     hostPath:
-     path: /storage
+     path: /tmp/files
+     type: DirectoryOrCreate
 
