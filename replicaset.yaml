@@ -26,5 +26,5 @@ spec:
       volumes:
       - name: test-volume
         hostPath:
-        path: /storage
+         path: /storage
 
