@@ -8,12 +8,12 @@ spec:
     image: supergiantkir/animals:bear
     volumeMounts:
     - name: app-storage
-      mountPath: /tmp/files
+      mountPath: /tmp/files1
   - name: app2
     image: yanivomc/spring-music:latest
     volumeMounts:
     - name: app-storage
-      mountPath: /tmp/files
+      mountPath: /tmp/files2
   volumes:
   - name: test-volume
     hostPath:
