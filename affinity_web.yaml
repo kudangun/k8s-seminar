@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: web
   label:
-    app:web
+    app: web
 spec:
   affinity:
     podAffinity:
