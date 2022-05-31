@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: redis
   label:
-    app:redis
+    app: redis
 spec:
   affinity:
     podAntiAffinity:
