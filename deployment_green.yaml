@@ -13,6 +13,7 @@ spec:
     metadata:
       labels:
         app: green
+        canary: blue-green
     spec:
       containers:
       - name: green
