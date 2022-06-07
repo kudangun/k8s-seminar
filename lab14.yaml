@@ -8,12 +8,12 @@ spec:
   ingressClassName: nginx
   rules:
   - host: "moose.54.216.143.51.nip.io"
-  - http:
+    http:
       paths:
-      - path: /moose(/|$)(.*)
-        pathType: Prefix
-        backend:
+      - backend:
           service:
             name: moose-svc
             port:
               number: 80
+        path: /
+        pathType: Prefix
