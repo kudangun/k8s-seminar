@@ -13,13 +13,13 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: bear
+            name: bear-svc
             port:
               number: 80
       - path: /moose
         pathType: Prefix
         backend:
           service:
-            name: moose
+            name: moose-svc
             port:
               number: 80
