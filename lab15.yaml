@@ -63,3 +63,22 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx-example
+  rules:
+  - http:
+      paths:
+      - path: /bear
+        pathType: Prefix
+        backend:
+          service:
+            name: moose-svc
+            port:
+              number: 80
