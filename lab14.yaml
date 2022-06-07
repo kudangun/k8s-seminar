@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: "moose.54.216.143.51.nip.io"
+  - http:
+      paths:
+      - path: /moose(/|$)(.*)
+        pathType: Prefix
+        backend:
+          service:
+            name: moose-svc
+            port:
+              number: 80
